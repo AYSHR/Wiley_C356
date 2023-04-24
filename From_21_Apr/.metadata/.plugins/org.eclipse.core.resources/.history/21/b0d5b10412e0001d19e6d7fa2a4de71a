@@ -1,0 +1,18 @@
+package Wiley_core_java;
+
+public class InstanceBlock {
+	{
+		System.out.println("isn block called");
+	}
+	public InstanceBlock() {
+		System.out.println("o args");
+	}
+	public InstanceBlock(int a,int b) {
+		System.out.println("sum from 2 args "+ (a+b));
+	}
+	public static void main(String[] args) {
+		InstanceBlock i=new InstanceBlock();
+		InstanceBlock j=new InstanceBlock(2,3);
+	// ins block called evry time obj is created
+	}
+}

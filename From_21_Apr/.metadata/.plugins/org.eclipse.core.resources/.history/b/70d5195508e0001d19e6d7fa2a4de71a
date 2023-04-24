@@ -1,0 +1,12 @@
+package Wiley_core_java;
+
+public class VarScope {
+  int ins=5;
+  public static void main(String[] args) {
+	 int loc=9;
+	 VarScope v=new VarScope();
+	 System.out.println("loc "+ loc);
+	 System.out.println("ins "+ v.ins);
+	 
+}
+}

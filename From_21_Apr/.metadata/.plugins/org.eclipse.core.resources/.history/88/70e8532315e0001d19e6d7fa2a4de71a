@@ -1,0 +1,21 @@
+package Wiley_core_java;
+
+public class StaticBlock {
+	//order:  staic-> ins block->const block
+  static {
+	  System.out.println("static block");
+  }
+  {
+	  System.out.println("ins block");
+  }
+  public StaticBlock() {
+	  System.out.println("constructor");
+  }
+  public static void main(String[] args) {
+	new StaticBlock();
+	new StaticBlock();
+	new StaticBlock();
+	//System.out.println(new StaticBlock());
+	//System.out.println(new StaticBlock());
+}
+}

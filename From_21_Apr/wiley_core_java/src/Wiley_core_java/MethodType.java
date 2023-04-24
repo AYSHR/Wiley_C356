@@ -1,0 +1,34 @@
+package Wiley_core_java;
+//one file can't have 2 public class
+class Testing {
+	public static void add1(int v1,int v2) {
+		System.out.println("sum frrom ins: "+(v1+v2));
+	  
+	}
+}
+public class MethodType {
+	public void add(int v1,int v2) {
+		System.out.println("sum frrom ins: "+(v1+v2));
+	  this.sub(v1, v2);
+	}
+	//we can't call non-static from static using this
+	public void sub(int v1,int v2) {
+		System.out.println("sub frrom ins: "+(v1-v2));
+	}
+	public static void stadd(int v1,int v2) {
+		System.out.println("sum frrom st: "+(v1+v2));
+	}
+	public static int stmul(int v1,int v2) {
+		//System.out.println("sum frrom st: "+(v1+v2));
+	    return(v1*v2);
+	  }
+ public static void main(String[] args) {
+	MethodType m=new MethodType();
+	m.add(2,3);
+	stadd(3,2);
+	System.out.println("from other class :" );
+	Testing.add1(1,2);
+	
+	System.out.println("mul  :"+ stmul(1,2));
+}
+}

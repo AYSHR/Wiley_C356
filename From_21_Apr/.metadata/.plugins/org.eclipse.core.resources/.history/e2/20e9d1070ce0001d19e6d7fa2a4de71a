@@ -1,0 +1,15 @@
+package Wiley_core_java;
+
+public class MethodType {
+	public void add(int v1,int v2) {
+		System.out.println("sum frrom ins: "+(v1+v2));
+	}
+	public static void stadd(int v1,int v2) {
+		System.out.println("sum frrom st: "+(v1+v2));
+	}
+ public static void main(String[] args) {
+	MethodType m=new MethodType();
+	m.add(2,3);
+	stadd(3,2);
+}
+}
