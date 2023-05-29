@@ -8,10 +8,9 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/spring-context.xsd">
 
-	<bean class="com.wiley.springcore.Address" name="ref1">
-		<property name="sobj" ><ref bean="student4"/></property>
-	</bean>
 
+
+<!-- 
 	<bean class="com.wiley.springcore.Student" name="student1">
 		<property name="studentid">
 			<value>19091</value>
@@ -39,6 +38,7 @@
 	<bean class="com.wiley.springcore.Student" name="student3"
 		p:studentid="1921" p:studentName="harry" p:AddressName="asia">
 	</bean>
+	 -->
 
 	<bean class="com.wiley.springcore.Student" name="student4">
 		<property name="skills">
@@ -76,16 +76,20 @@
 		</property>
 	</bean>
 
-	<bean class="com.wiley.springcore.Student" name="student5">
-		<property name="props">
-			<props>
-				<prop key="studentName">elsa</prop>
-				<prop key="studentid">1231</prop>
-				<prop key="AddressName">bangalore</prop>
 
-			</props>
-		</property>
+	<bean class="com.wiley.springcore.Address" name="ref1">
+		<property name="sobj" ><ref bean="student4"/></property>
 	</bean>
-
+	<!--  
+	<bean class="com.wiley.springcore.Student" name="student5">
+        <property name="props">
+            <props>
+                <prop key="studentName">elsa</prop>
+                <prop key="studentid">1231</prop>
+                <prop key="AddressName">bangalore</prop>
+            </props>
+        </property>
+    </bean>
+-->
 
 </beans>

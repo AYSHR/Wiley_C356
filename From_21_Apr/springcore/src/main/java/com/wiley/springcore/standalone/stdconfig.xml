@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<util:list id="myfriend" list-class="java.util.LinkedList">
+		<value>harry</value>
+		<value>ben</value>
+		<value>harry1</value>
+		<value>ben1</value>
+		<value>harry2</value>
+		<value>ben2</value>
+	</util:list>
+
+
+<util:map map-class="java.util.HashMap" id="fee">
+<entry key="spring" value="9000">
+</entry>
+<entry key="sas" value="19000">
+</entry>
+<entry key="bi" value="9000">
+</entry>
+<entry key="vue" value="9000">
+</entry>
+</util:map>
+
+
+	<bean class="com.wiley.springcore.standalone.Person" name="person1">
+		<property name="friends" ref="myfriend" />
+		<property name="course" ref="fee" />
+	</bean>
+
+	<bean class="com.wiley.springcore.standalone.Employee" name="emp1">
+		<property name="phones">
+			<list>
+				<value>88765523445</value>
+				<value>4567523445</value>
+				<value>8952344522</value>
+				<value>98764535234</value>
+			</list>
+		</property>
+		
+		<property name="address">
+			<set>
+				<value>bangalore</value>
+				<value>chennai</value>
+				<value>hp</value>
+				<value>ap</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="pyhton" value="13" />
+				<entry key="ruby" value="17" />
+				<entry key="java" value="20" />
+				<entry key="sql" value="11" />
+			</map>
+		</property>
+	</bean>
+</beans>

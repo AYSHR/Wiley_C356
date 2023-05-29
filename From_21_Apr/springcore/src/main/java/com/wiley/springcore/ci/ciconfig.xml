@@ -10,15 +10,15 @@
  http://www.springframework.org/schema/spring-context.xsd">
 
 
-<bean class="com.wiley.springcore.cis.cert" name="certref">
+<bean class="com.wiley.springcore.ci.cert" name="certref">
 		<constructor-arg  value="AWS solution architect professional" />
 	</bean>
 	
 	
-	<bean class="com.wiley.springcore.cis.Person" name="ref">
+	<bean class="com.wiley.springcore.ci.Person" name="ref">
 		<constructor-arg type="int" value="19"></constructor-arg>
 		<constructor-arg  value="harry"></constructor-arg>
-		<constructor-arg ref="certref" />
+		<constructor-arg  ref="certref" />
 	</bean>
 
 

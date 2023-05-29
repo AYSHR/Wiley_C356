@@ -10,5 +10,10 @@ public String getCertname() {
 public void setCertname(String certname) {
 	this.certname = certname;
 }
+
+public cert(String certname) {
+	super();
+	this.certname = certname;
+}
    
 }

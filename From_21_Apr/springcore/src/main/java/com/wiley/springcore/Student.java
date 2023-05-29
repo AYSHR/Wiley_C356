@@ -5,20 +5,15 @@ import java.util.List;
 import java.util.Set;
 
 public class Student {
+	
 	private int studentid;
 	private String studentName;
 	private String AddressName;
 	private List<String> skills;
     private Set<String>  fruits;
     private HashMap<String,Integer> marks;
-	public Student(int studentid, String studentName, String addressName, List<String> skills) {
-		super();
-		this.studentid = studentid;
-		this.studentName = studentName;
-		AddressName = addressName;
-		this.skills = skills;
-	}
-
+	
+	
 	public Student(int studentid, String studentName, String addressName, List<String> skills, Set<String> fruits,
 			HashMap<String, Integer> marks) {
 		super();
@@ -56,8 +51,11 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student \n[studentid=" + studentid + ",\nstudentName=" + studentName + ", \nAddressName=" + AddressName
-				+ ",\nskills=" + skills + ", \nfruits=" + fruits + ", \nmarks=" + marks + "]";
+		return "Student [studentid=" + studentid + ", studentName=" + studentName + ", AddressName=" + AddressName
+				+ ", skills=" + skills + ", fruits=" + fruits + ", marks=" + marks + ", getFruits()=" + getFruits()
+				+ ", getMarks()=" + getMarks() + ", getSkills()=" + getSkills() + ", getStudentid()=" + getStudentid()
+				+ ", getStudentName()=" + getStudentName() + ", getAddressName()=" + getAddressName() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 
 	public Student() {
@@ -95,9 +93,6 @@ public class Student {
 	public void setAddressName(String addressName) {
 		AddressName = addressName;
 	}
-
-	public static void main(String[] args) {
-
-	}
+	
 
 }
